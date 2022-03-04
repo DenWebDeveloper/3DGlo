@@ -4,4 +4,4 @@ const moduleTwo = () => {
     console.log("moduleTwo");
 };
 
-module.exports = moduleTwo;
+export default moduleTwo;

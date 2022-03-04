@@ -1,8 +1,10 @@
 "use strict";
 
-const moduleOne = require('./modules/one');
+import moduleOne from './modules/one';
 
-const moduleTwo = require('./modules/two');
+
+import moduleTwo from './modules/two';
+
 
 moduleOne();
 
