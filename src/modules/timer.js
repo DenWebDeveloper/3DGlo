@@ -24,9 +24,11 @@ const timer = (deadLine) => {
         let minuts = addZero(Math.floor((timeRamaining / 60) % 60 ));
 
         let seconds = addZero(Math.floor(timeRamaining % 60));
+        
 
         if(seconds > 0){
-
+            seconds = addZero(Math.floor(timeRamaining % 60));
+            
         }else{
             clearInterval(interval);
 
