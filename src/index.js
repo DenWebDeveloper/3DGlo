@@ -1,11 +1,5 @@
 "use strict";
 
-import moduleOne from './modules/one';
+import timer from './modules/timer';
 
-
-import moduleTwo from './modules/two';
-
-
-moduleOne();
-
-moduleTwo();
+timer('9 mart 2022');

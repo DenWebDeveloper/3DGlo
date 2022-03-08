@@ -1,9 +1,9 @@
 "use strict";
 
-const moduleTwo = () => {
-    console.log("moduleTwo");
+const Two = () => {
+    console.log("Two");
 
 
 };
 
-export default moduleTwo;
+export default Two;
