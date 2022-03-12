@@ -6,7 +6,7 @@ import modal from './modules/modal';
 
 
 
-timer('12 mart 2022');
+timer('9 mart 2023');
 menu();
 modal();
 
