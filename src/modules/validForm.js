@@ -16,7 +16,7 @@ const validForm = () => {
 
         item.addEventListener('input', () => {
 
-            if(!/[^а-яa-z]+$/gi.test(item.value) && item.value !== ""){
+            if(/[^0-9]/gi.test(item.value) && item.value !== ""){
                 
                 item.value = item.value = "";
 
