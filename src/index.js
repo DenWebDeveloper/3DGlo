@@ -11,7 +11,3 @@ menu();
 modal();
 
 
-<<<<<<< HEAD
-timer('9 mart 2023');
-=======
->>>>>>> lesson20
