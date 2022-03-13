@@ -70,8 +70,6 @@ const modal = () => {
   
     });
 
-
-
     const popupAnimation = () => {
 
         count++;
