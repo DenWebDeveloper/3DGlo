@@ -6,7 +6,7 @@ const modal = () => {
     const popupContent = modal.querySelector('.popup-content');
     const buttonsPopup = document.querySelectorAll('.popup-btn');
     const buttonsMenu = document.querySelectorAll('menu>ul>li>a');
-    const closeBtn = modal.querySelector('.popup-close');
+   
     const scrollBtnDown = document.querySelector('main>a');
 
     const ourService = document.querySelector('#service-block');  // Наши Услуги
@@ -36,7 +36,7 @@ const modal = () => {
 
     for(let i = 0; i < buttonsMenu.length; i++){
 
-        buttonsMenu[i].addEventListener('click',(e) => {
+        buttonsMenu[i].addEventListener('click', (e) => {
             e.preventDefault();
             scrollTo(arraySections[i]);
 
@@ -64,12 +64,6 @@ const modal = () => {
         });
     });
 
-    closeBtn.addEventListener('click', () => {
-    
-        modal.style.display = 'none';
-  
-    });
-
     const popupAnimation = () => {
 
         count++;
@@ -82,6 +76,12 @@ const modal = () => {
         }
         
     };
+
+    modal.addEventListener('click', (e) => {
+        if (!e.target.closest('.popup-content') || e.target.classList.contains('popup-close')){
+            modal.style.display = 'none';
+        }
+    });
 
 };
 
