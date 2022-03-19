@@ -10,33 +10,30 @@ const slider = () => {
 
     let interval;
 
-    // Создаем точку активную для слайдера.
+    
 
-    const dot = document.createElement('li');
-    dot.classList.add('dot','dot-active');
-    listDots.append(dot);
-    console.log(listDots);
+    // Создаем активную точку.
 
-
-    // Создаем точки для слайдера.
     const createDot = () => {
 
-        let dots = document.createElement('li');
-        dots.classList.add('dot');
-
-        listDots.append(dots);
+        const dot = document.createElement('li');
+        dot.classList.add('dot','dot-active');
+        listDots.append(dot);
 
     };
 
-    
+    createDot();
+
+    // Создаем точки для слайдера.
     for(let i = 0; i < slides.length - 1; i++){
 
-        createDot();
+        let dots = document.createElement('li');
+        dots.classList.add('dot');
+        listDots.append(dots);
     
     }
 
     const dots = document.querySelectorAll('.dot');
-
 
 
     // Переключение слайдов назад.
@@ -69,12 +66,11 @@ const slider = () => {
 
     };
 
-    // Запуск функции Старт.
-    const startSlide = (timer = 50) => {
+     // Запуск функции Старт.
+     const startSlide = (timer = 50) => {
+        interval = setInterval(autoSlide, timer);
 
-       interval = setInterval(autoSlide, timer);
     };
-
 
     // Остановка функции Старт.
     const stopSlide = () => {
