@@ -3,9 +3,9 @@
 const menu = () => {
 
     const menu = document.querySelector('menu');
-    
+
     menu.addEventListener('click', (e) => {
-        console.log("Клик");
+
         if (!e.target.classList.contains('active-menu')) {
             e.target.classList.add('active-menu');
         } else {
@@ -13,6 +13,8 @@ const menu = () => {
 
         }
     });
+
+
 
 };
 

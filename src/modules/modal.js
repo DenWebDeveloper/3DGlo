@@ -36,7 +36,7 @@ const modal = () => {
 
     for(let i = 0; i < buttonsMenu.length; i++){
 
-        buttonsMenu[i].addEventListener('click', (e) => {
+        buttonsMenu[i].addEventListener('click',(e) => {
             e.preventDefault();
             scrollTo(arraySections[i]);
 
