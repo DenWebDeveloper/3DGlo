@@ -64,6 +64,8 @@ const modal = () => {
         });
     });
 
+
+    // Анимация модального окна.
     const popupAnimation = () => {
 
         count++;
