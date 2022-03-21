@@ -1,5 +1,5 @@
 "use strict";
-
+import { animate } from './helpers';
 const modal = () => {
 
     const modal = document.querySelector('.popup');
@@ -68,15 +68,16 @@ const modal = () => {
     // Анимация модального окна.
     const popupAnimation = () => {
 
-        count++;
-        idInterval = requestAnimationFrame(popupAnimation);
-        
-        if( count < 191 && window.screen.availWidth > 768){
-            popupContent.style.top = (count * 2)  - 191 + 'px';
-        }else {
-            cancelAnimationFrame(idInterval);
-        }
-        
+        animate({
+            duration: 2000,
+            timing(timeFraction) {
+              return timeFraction;
+            },
+            draw(progress) {
+               popupContent.style.top = (25 * progress) + '%';
+              
+            }
+        });
     };
 
     modal.addEventListener('click', (e) => {
